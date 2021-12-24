@@ -159,20 +159,20 @@ function scrollZoom() {
   }
 }
 
-function atBottomOfPage() {
-    window.addEventListener('scroll', function() {
-        let documentHeight = document.body.scrollHeight;
-        let currentScroll = window.scrollY + window.innerHeight;
-        // When the user is [modifier]px from the bottom, fire the event.
-        let modifier = 200; 
-        if(currentScroll + modifier > documentHeight) {
-            console.log('bottom of page');
-            document.getElementById('scroll-text').style.display = 'none';
-        } else {
-            document.getElementById('scroll-text').style.display = 'block';
-        }
-    });
-}
+// function atBottomOfPage() {
+//     window.addEventListener('scroll', function() {
+//         let documentHeight = document.body.scrollHeight;
+//         let currentScroll = window.scrollY + window.innerHeight;
+//         // When the user is [modifier]px from the bottom, fire the event.
+//         let modifier = 200; 
+//         if(currentScroll + modifier > documentHeight) {
+//             console.log('bottom of page');
+//             document.getElementById('scroll-text').style.display = 'none';
+//         } else {
+//             document.getElementById('scroll-text').style.display = 'block';
+//         }
+//     });
+// }
 
-atBottomOfPage();
+// atBottomOfPage();
 scrollZoom();
