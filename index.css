@@ -548,6 +548,15 @@ aside p {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	position: relative;
+	flex-direction: column;
+}
+
+.gift-section h2 {
+	font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+	font-size: 3.5rem;
+	position: absolute;
+	top: 90px;
 }
 
 .birthday-gift {
@@ -604,6 +613,7 @@ input#click {
 	transition: .3s;
 	cursor: pointer;
 	z-index: 99999;
+	animation: pulse2 1s infinite;
 }
 
 .click:before {
@@ -655,12 +665,12 @@ input#click {
 
 #click:checked ~ .dolphin {
 	transform: translateY(-18px);
-	animation: fadein 1s forwards 1;
+	animation: fadein 1.5s forwards 1;
 }
 
 #click:checked ~ .wishes {
 	transform: translate(125px, -70px);
-	animation: fadein 1s forwards 1, pulse 2s infinite;
+	animation: fadein 1.5s forwards 1, pulse 2s infinite;
 	width: 250px;
 }
 
@@ -727,5 +737,36 @@ input#click {
 
 	to {
 		background-color: #1d2d44;
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+	}
+
+	70% {
+		-webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+	}
+
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+	}
+}
+
+@keyframes pulse2 {
+	0% {
+		-moz-box-shadow: 0 0 0 0 #cca92c;
+		box-shadow: 0 0 0 0 #cca92c;
+	}
+
+	70% {
+		-moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+		box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+	}
+
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+		box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
 	}
 }
